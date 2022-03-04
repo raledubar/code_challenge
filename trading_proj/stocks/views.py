@@ -13,7 +13,5 @@ def home_view(request):
     headers = {
     'x-api-key': personal_api
     }
-    # data = requests.get(url).json()
     data = requests.request("GET", url, headers=headers, params=querystring)
-    # print(data.text)
     return HttpResponse(data)
